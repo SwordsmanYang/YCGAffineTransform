@@ -1,25 +1,129 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="girl.png" translatesAutoresizingMaskIntoConstraints="NO" id="1yX-G2-tbW">
+                                <rect key="frame" x="20" y="37" width="280" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="1yX-G2-tbW" secondAttribute="height" multiplier="35:16" id="A2U-7e-0xb"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="分享到全世界" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rai-Rt-YZQ">
+                                <rect key="frame" x="0.0" y="568" width="320" height="42"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="SP1-2V-Ue6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.93772649340000003" blue="0.2201593365" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i5v-wh-hok">
+                                <rect key="frame" x="284" y="183" width="32" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="6Ti-tJ-xhg"/>
+                                    <constraint firstAttribute="height" constant="24" id="Unb-Vp-Wse"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="hot_share_p.png"/>
+                                <connections>
+                                    <action selector="shareBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c2U-w9-xz1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dwr-0n-2l7">
+                                <rect key="frame" x="20" y="183" width="32" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="fk3-Iq-dzV"/>
+                                    <constraint firstAttribute="width" constant="32" id="lwP-o7-15e"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="hot_support_p.png"/>
+                                <connections>
+                                    <action selector="praiseIcon:" destination="BYZ-38-t0r" eventType="touchUpInside" id="axN-nV-XEi"/>
+                                    <action selector="shareBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xZB-Oj-a6a"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="3.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="AjK-cz-GKm">
+                                <rect key="frame" x="96" y="292" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="wbk-2E-Tpe"/>
+                                    <constraint firstAttribute="width" constant="128" id="y2Q-cD-WpW"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQT-C8-2BD">
+                                <rect key="frame" x="93" y="452" width="135" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="135" id="5Wh-32-BLS"/>
+                                    <constraint firstAttribute="height" constant="30" id="DhP-Dx-TgD"/>
+                                </constraints>
+                                <state key="normal" title="老子把你弄正">
+                                    <color key="titleColor" red="1" green="0.93772649340000003" blue="0.2201593365" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="rotateBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9mP-mY-zo3"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="4.png" translatesAutoresizingMaskIntoConstraints="NO" id="rdS-S0-UlW">
+                                <rect key="frame" x="20" y="215" width="32" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="EuY-GV-wYs"/>
+                                    <constraint firstAttribute="height" constant="40" id="WF0-e1-1US"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Dwr-0n-2l7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="0p2-x5-AUF"/>
+                            <constraint firstItem="rdS-S0-UlW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="302-L0-3Co"/>
+                            <constraint firstItem="UQT-C8-2BD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7hc-c6-mP0"/>
+                            <constraint firstItem="rdS-S0-UlW" firstAttribute="top" secondItem="Dwr-0n-2l7" secondAttribute="bottom" constant="8" id="Afv-Mo-fHR"/>
+                            <constraint firstItem="1yX-G2-tbW" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="CHL-sd-Ph0"/>
+                            <constraint firstItem="AjK-cz-GKm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Fsq-y8-jS1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Rai-Rt-YZQ" secondAttribute="trailing" constant="-20" id="Lsw-5D-tcq"/>
+                            <constraint firstItem="1yX-G2-tbW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="MIq-fN-oLW"/>
+                            <constraint firstItem="Rai-Rt-YZQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="Vnh-kF-Tbv"/>
+                            <constraint firstItem="AjK-cz-GKm" firstAttribute="top" secondItem="1yX-G2-tbW" secondAttribute="bottom" constant="127" id="Zwk-eB-M5z"/>
+                            <constraint firstItem="i5v-wh-hok" firstAttribute="top" secondItem="1yX-G2-tbW" secondAttribute="bottom" constant="18" id="bd7-7c-YKe"/>
+                            <constraint firstItem="1yX-G2-tbW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="17" id="mLH-rv-CPn"/>
+                            <constraint firstItem="Dwr-0n-2l7" firstAttribute="top" secondItem="1yX-G2-tbW" secondAttribute="bottom" constant="18" id="mLg-Fc-TVG"/>
+                            <constraint firstItem="UQT-C8-2BD" firstAttribute="top" secondItem="AjK-cz-GKm" secondAttribute="bottom" constant="32" id="plg-rv-8eg"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Rai-Rt-YZQ" secondAttribute="bottom" constant="-42" id="vK1-bn-dDh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="i5v-wh-hok" secondAttribute="trailing" constant="-16" id="x1G-Ed-F9T"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="coolimag" destination="rdS-S0-UlW" id="GQe-6O-0Et"/>
+                        <outlet property="rotateImge" destination="AjK-cz-GKm" id="TJY-7p-uti"/>
+                        <outlet property="shareLab" destination="Rai-Rt-YZQ" id="NPW-tx-Hr5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="305" y="385"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="3.jpg" width="198" height="198"/>
+        <image name="4.png" width="242" height="348"/>
+        <image name="girl.png" width="830" height="504"/>
+        <image name="hot_share_p.png" width="16" height="16"/>
+        <image name="hot_support_p.png" width="16" height="16"/>
+    </resources>
 </document>
